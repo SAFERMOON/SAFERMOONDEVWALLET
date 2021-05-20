@@ -13,7 +13,6 @@ contract Vault is Ownable {
 
     IERC20 public immutable token;
     uint256 private constant _timelock = 1 days;
-    // uint256 private constant _timelock = 1 minutes;
 
     uint256 public _timelocks;
     mapping(uint256 => uint256) public _timestamps;
