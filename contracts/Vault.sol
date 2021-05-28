@@ -22,7 +22,7 @@ contract Vault is Ownable {
     }
 
     function withdraw(address to, uint256 amount) external onlyOwner {
-        require(amount > 0, "Vault: amount must be > 0");
+        require(amount != 0, "Vault: amount must be > 0");
         require(amount <= balance(), "Vault: amount exceeds balance");
 
         token.safeTransfer(to, amount);
